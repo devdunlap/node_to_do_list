@@ -1,7 +1,7 @@
 import  Sequelize  from "sequelize"
 import { sequelize } from '../db/index.js';
 
-export const Gym = sequelize.define('gym', {
+export const Todo = sequelize.define('todo', {
     title: {
         type: Sequelize.STRING
     },

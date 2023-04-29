@@ -1,9 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import router from './routes/gym.js';
+import router from './routes/todo.js';
 import {sequlize} from './models/index.js';
 import cors from 'cors';
-import { Gym } from './models/index.js';
+import { Todo } from './models/index.js';
 
 const app = express();
 const port = 3090;
@@ -23,9 +23,9 @@ app.listen(port, (req, res) => {
     console.log(`Server running on port ${port}`);
 });
 
-app.use('/gym', router);
+app.use('/todo', router);
 
 
-app.get('/gym', (req, res) => {
+app.get('/todo', (req, res) => {
     res.send('My to Do App');
 });
