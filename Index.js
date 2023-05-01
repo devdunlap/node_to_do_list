@@ -13,7 +13,7 @@ app.use(cors());
 
 
 sequlize.sync()
-.then(() => {
+.then(res => {
     console.log(res);
 }).catch(err => {
     console.log(err);
